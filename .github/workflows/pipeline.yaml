@@ -50,9 +50,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./day2_docker
-          push: true
-          # Tags the image with the exact Git commit SHA for perfect traceability
-          tags: ghcr.io/${{ github.repository_owner }}/cicd-dashboard:${{ github.sha }},ghcr.io/${{ github.repository_owner }}/cicd-dashboard:latest
+    uses: docker/build-push-action@v5
+    with:
+      context: ./day2_docker
+      push: true
+      tags: ghcr.io/ashwinsubramanyags/data-devops-nie-2026:${{ github.sha }},ghcr.io/ashwinsubramanyags/data-devops-nie-2026:latest
