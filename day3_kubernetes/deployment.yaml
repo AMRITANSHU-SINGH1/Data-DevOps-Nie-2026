@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telemetry-dashboard
+  labels:
+    app: telemetry-dashboard
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: telemetry-dashboard
+  template:
+    metadata:
+      labels:
+        app: telemetry-dashboard
+    spec:
+      containers:
+      - name: dashboard
+        image: cicd-dashboard:latest
+        imagePullPolicy: Never 
+        ports:
+        - containerPort: 8501
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
