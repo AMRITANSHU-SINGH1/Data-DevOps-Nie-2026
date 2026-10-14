@@ -50,8 +50,9 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Push Docker Image
-    uses: docker/build-push-action@v5
-    with:
-      context: ./day2_docker
-      push: true
-      tags: ghcr.io/ashwinsubramanyags/data-devops-nie-2026:${{ github.sha }},ghcr.io/ashwinsubramanyags/data-devops-nie-2026:latest
+        uses: docker/build-push-action@v5
+        with:
+          context: ./day2_docker
+          push: true
+          # Tags the image with the exact Git commit SHA and latest
+          tags: ghcr.io/ashwinsubramanyags/data-devops-nie-2026:${{ github.sha }},ghcr.io/ashwinsubramanyags/data-devops-nie-2026:latest
