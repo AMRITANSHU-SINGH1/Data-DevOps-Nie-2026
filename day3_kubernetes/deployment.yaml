@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: dashboard
-        image: cicd-dashboard:latest
-        imagePullPolicy: Never 
+        image: ghcr.io/ashwinsubramanyags/data-devops-nie-2026:latest
+        imagePullPolicy: Always 
         ports:
         - containerPort: 8501
         resources:
