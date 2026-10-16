@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 
 import numpy as np
 import pandas as pd
+
 # Configuration
 NUM_RUNS = 500
 TEAMS = ['Frontend', 'Backend', 'Data', 'Security']
