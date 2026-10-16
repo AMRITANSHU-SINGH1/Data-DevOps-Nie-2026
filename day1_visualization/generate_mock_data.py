@@ -1,7 +1,8 @@
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
 import random
+from datetime import datetime, timedelta
+
+import numpy as np
+import pandas as pd
 
 # Configuration
 NUM_RUNS = 500
